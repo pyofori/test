@@ -56,6 +56,7 @@ public class SmsController {
 //
 //            headers.add( "Authorization", authHeader );
             headers.setBasicAuth("wavrymhs","ztjsbhvp");
+            headers.add("user-agent", "Application");
 
             headers.setContentType(MediaType.APPLICATION_JSON);
 
