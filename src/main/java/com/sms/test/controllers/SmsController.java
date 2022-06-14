@@ -48,13 +48,14 @@ public class SmsController {
             RestTemplate restTemplate = new RestTemplate();
             HttpHeaders headers = new HttpHeaders();
 
-            String auth = "wavrymhs" + ":" + "ztjsbhvp";
-            byte[] encodedAuth = Base64.encodeBase64(
-                    auth.getBytes(StandardCharsets.US_ASCII));
-
-            String authHeader = "Basic " + new String( encodedAuth );
-
-            headers.add( "Authorization", authHeader );
+//            String auth = "wavrymhs" + ":" + "ztjsbhvp";
+//            byte[] encodedAuth = Base64.encodeBase64(
+//                    auth.getBytes(StandardCharsets.US_ASCII));
+//
+//            String authHeader = "Basic " + new String( encodedAuth );
+//
+//            headers.add( "Authorization", authHeader );
+            headers.setBasicAuth("wavrymhs","ztjsbhvp");
 
             headers.setContentType(MediaType.APPLICATION_JSON);
 
